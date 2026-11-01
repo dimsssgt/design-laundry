@@ -1,6 +1,6 @@
 <!doctype html>
-<html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Pop Up Terima Pesanan — Laundyku</title>
-
+<html lang="id"><head><meta charset="utf-8"><title>Pop Up Terima Pesanan — Laundyku</title></head>
+<body><x-dc><helmet>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&amp;family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet">
 <style>
@@ -14,10 +14,7 @@ input,select,textarea{width:100%;padding:12px 16px;border:2px solid var(--k);bor
 .row{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:2px dashed #C9B98F}
 .row span:first-child{color:#4A5A80}
 @media (max-width:760px){.two{grid-template-columns:1fr!important}}
-</style>
-</head>
-<body style="margin:0">
-
+</style></helmet>
 <div style="--b:#1457D6;--y:#FFD21F;--c:#FFF4DE;--r:#D42A25;--k:#0B2A6B;font-family:'Space Mono',monospace;color:var(--k);background:rgba(11,42,107,.55);min-height:100%;padding:60px 28px;box-sizing:border-box;display:flex;align-items:center;justify-content:center">
 <div style="background:#fff;border:2px solid var(--k);border-radius:22px;box-shadow:8px 8px 0 var(--k);width:100%;max-width:960px;padding:34px;box-sizing:border-box">
 <div style="display:flex;justify-content:space-between;align-items:start;gap:16px;flex-wrap:wrap"><div><h2 class="d" style="font-size:28px;color:var(--b)">Terima pesanan</h2><p class="mono" style="margin:8px 0 0;font-size:12px">LDY-015 · Kiloan · Express 6 jam</p></div><a href="#" class="btn y" style="min-height:40px;padding:6px 16px;font-size:12px">Tutup ✕</a></div>
@@ -37,10 +34,10 @@ input,select,textarea{width:100%;padding:12px 16px;border:2px solid var(--k);bor
 
 <section style="border:2px solid var(--k);border-radius:16px;padding:22px">
 <div class="d" style="font-size:16px;margin-bottom:4px">Form penimbangan &amp; harga</div>
-<label>Berat (kg)</label><input type="text" value="4">
+<label>Berat (kg)</label><input id="pb" type="text" inputmode="decimal" value="4">
 <label>Jumlah item (pcs)</label><input type="text" value="12">
-<label>Harga per kg (Rp)</label><input type="text" value="10.000">
-<label>Subtotal (otomatis)</label><input type="text" value="Rp 40.000">
+<label>Harga per kg (Rp)</label><input id="ph" type="text" inputmode="numeric" value="10.000">
+<label>Subtotal (otomatis)</label><input id="ps" type="text" value="Rp 40.000" readonly="">
 <label>Catatan kondisi</label><textarea rows="2" placeholder="Cth: noda di kerah"></textarea>
 </section>
 </div>
@@ -51,6 +48,6 @@ input,select,textarea{width:100%;padding:12px 16px;border:2px solid var(--k);bor
 </div>
 </div>
 </div>
-
-
+<script>(function(){function u(){var b=parseFloat((document.getElementById('pb').value||'0').replace(',','.'))||0;var h=parseInt((document.getElementById('ph').value||'0').replace(/\D/g,''))||0;document.getElementById('ps').value='Rp '+Math.round(b*h).toLocaleString('id-ID');}document.addEventListener('input',u);u();})();</script>
+</x-dc>
 </body></html>

@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Rekap pendapatan — Admin — Laundyku</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&amp;family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}a{color:inherit;text-decoration:none}
+.d{font-family:'Archivo Black',Impact,sans-serif;text-transform:uppercase;letter-spacing:-.01em;line-height:1;margin:0}
+.mono{font-family:'Space Mono',monospace;font-size:13px;line-height:1.6}
+.btn{display:inline-flex;align-items:center;justify-content:center;background:var(--b);color:#fff;font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:13px;padding:10px 22px;border-radius:999px;min-height:44px;box-sizing:border-box;border:0;cursor:pointer}
+.btn.y{background:var(--y);color:var(--k);box-shadow:inset 0 0 0 2px var(--k)}
+.btn.r{background:var(--r);color:#fff}
+.btn.s{padding:6px 16px;min-height:40px;font-size:12px}
+.card{background:#fff;border:2px solid var(--k);border-radius:18px;box-shadow:5px 5px 0 var(--k);padding:28px;color:var(--k)}
+.chip{display:inline-block;border:2px solid var(--k);border-radius:999px;padding:3px 12px;font-family:'Space Mono',monospace;font-size:12px;font-weight:700;background:var(--c);white-space:nowrap}
+.chip.y{background:var(--y)}.chip.b{background:var(--b);color:#fff}.chip.g{background:#12805C;color:#fff}.chip.r{background:var(--r);color:#fff}
+.app{display:grid;grid-template-columns:270px 1fr;min-height:100%}
+.side{background:var(--b);color:#fff;padding:28px 20px;display:flex;flex-direction:column;gap:8px}
+.side a{display:flex;align-items:center;min-height:44px;padding:0 16px;border-radius:12px;font-family:'Space Mono',monospace;font-weight:700;font-size:13px;text-transform:uppercase}
+.side a.on{background:var(--y);color:var(--k)}
+.main{padding:40px 48px;display:flex;flex-direction:column;gap:32px;background:#EEF2F7}
+.g2{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:28px}
+.g4{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px}
+.sc{overflow-x:auto}table{border-collapse:collapse;width:100%;min-width:560px}
+th,td{padding:12px 10px;border-bottom:2px dashed #C9B98F;text-align:left;font-family:'Space Mono',monospace;font-size:13px;vertical-align:middle}
+th{font-size:11px;text-transform:uppercase}
+label{display:block;font-family:'Space Mono',monospace;font-size:12px;font-weight:700;margin:14px 0 6px;text-transform:uppercase}
+input,select,textarea{width:100%;padding:12px 16px;border:2px solid var(--k);border-radius:12px;font-family:'Space Mono',monospace;font-size:13px;background:#fff;box-sizing:border-box;min-height:44px}
+h2.d{font-size:24px;color:var(--b);margin-bottom:16px}
+.seg{display:inline-flex;border:2px solid var(--k);border-radius:999px;overflow:hidden;background:#fff}
+.seg span{padding:10px 20px;font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:13px}
+.seg span.on{background:var(--b);color:#fff}
+@media (max-width:900px){.app{grid-template-columns:1fr}.side{flex-direction:row;flex-wrap:wrap}.main{padding:24px 20px}}
+
+
+.rad{position:absolute;opacity:0;pointer-events:none;width:0;height:0}
+.tabs{display:inline-flex;border:2px solid var(--k);border-radius:999px;overflow:hidden;background:#fff}
+.tabs label{padding:10px 20px;font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:13px;cursor:pointer}
+.panel{display:none;margin-top:24px}
+.sortbox{display:flex;align-items:center;gap:8px;justify-content:flex-end;margin-bottom:12px}
+.sortbox select{width:auto;min-width:200px}
+.ico{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border:2px solid var(--k);border-radius:12px;background:var(--y);font-size:18px;font-weight:700}
+.bars{display:flex;gap:6px;align-items:flex-end;height:260px;border-bottom:2px solid var(--k)}
+.bar{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:6px;min-width:0}
+.bar i{display:block;width:100%;max-width:44px;background:var(--b);border:2px solid var(--k);border-radius:8px 8px 0 0}
+.bar span{font-family:'Space Mono',monospace;font-size:11px}
+#p-h:checked ~ .tabs label[for=p-h], #p-w:checked ~ .tabs label[for=p-w], #p-m:checked ~ .tabs label[for=p-m]{background:var(--b);color:#fff}
+#p-h:checked ~ .panel-h, #p-w:checked ~ .panel-w, #p-m:checked ~ .panel-m{display:block}
+#p-m:checked ~ .filter .fbulan{display:none}
+.fharian{display:none}
+#p-h:checked ~ .filter .fharian{display:block}
+#p-h:checked ~ .filter .fperiode{display:none}
+</style>
+</head>
+<body style="margin:0">
+
+<div style="--b:#1457D6;--y:#FFD21F;--c:#FFF4DE;--r:#D42A25;--k:#0B2A6B;font-family:'Space Mono',monospace;color:var(--k);background:#EEF2F7">
+<div class="app"><aside class="side"><a href="#" class="d" style="font-size:22px;color:var(--y);padding:0;margin-bottom:24px;line-height:1">Laundy<br>ku</a><a href="#kelola" class="">Kelola</a><a href="#transaksi" class="">Transaksi</a><a href="#rekap" class="on">Rekap pendapatan</a><div style="flex:1"></div><div class="mono" style="background:rgba(255,255,255,.14);border-radius:12px;padding:14px">[Nama admin]<br>Admin</div><a href="#">Keluar</a></aside>
+<main class="main">
+<div style="display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap"><h1 class="d" style="font-size:40px;color:var(--b)">Rekap pendapatan</h1></div>
+<section id="rekap" class="card" style="position:relative">
+<input type="radio" name="per" id="p-h" class="rad" checked=""><input type="radio" name="per" id="p-w" class="rad"><input type="radio" name="per" id="p-m" class="rad">
+<div class="tabs"><label for="p-h">Harian</label><label for="p-w">Mingguan</label><label for="p-m">Bulanan</label></div>
+<div class="filter" style="display:flex;justify-content:space-between;align-items:end;gap:16px;flex-wrap:wrap;margin-top:20px">
+<div class="fharian" style="min-width:260px"><label>Tanggal</label><select><option>Hari ini (31/10/2026)</option><option>Kemarin (30/10/2026)</option><option>29/10/2026</option><option>28/10/2026</option><option>27/10/2026</option><option>26/10/2026</option><option>25/10/2026</option><option>24/10/2026</option><option>23/10/2026</option><option>22/10/2026</option><option>21/10/2026</option><option>20/10/2026</option><option>19/10/2026</option><option>18/10/2026</option><option>17/10/2026</option></select></div>
+<div class="fperiode" style="display:flex;gap:12px;flex-wrap:wrap"><div style="min-width:150px"><label>Tahun</label><select><option>2026</option><option>2025</option><option>2024</option><option>2023</option><option>2022</option><option>2021</option><option>2020</option></select></div><div class="fbulan" style="min-width:170px"><label>Bulan</label><select><option>Oktober</option><option>September</option><option>Agustus</option></select></div></div></div>
+
+<div class="panel panel-h">
+<h2 class="d" style="font-size:20px;color:var(--b);margin-bottom:12px">Pendapatan per jam</h2>
+<div class="bars"><div class="bar"><i style="height:44px"></i><span>07</span></div><div class="bar"><i style="height:72px"></i><span>08</span></div><div class="bar"><i style="height:99px"></i><span>09</span></div><div class="bar"><i style="height:132px"></i><span>10</span></div><div class="bar"><i style="height:165px"></i><span>11</span></div><div class="bar"><i style="height:198px"></i><span>12</span></div><div class="bar"><i style="height:176px"></i><span>13</span></div><div class="bar"><i style="height:154px"></i><span>14</span></div><div class="bar"><i style="height:143px"></i><span>15</span></div><div class="bar"><i style="height:187px"></i><span>16</span></div><div class="bar"><i style="height:220px"></i><span>17</span></div><div class="bar"><i style="height:209px"></i><span>18</span></div><div class="bar"><i style="height:165px"></i><span>19</span></div><div class="bar"><i style="height:121px"></i><span>20</span></div><div class="bar"><i style="height:77px"></i><span>21</span></div></div>
+<h2 class="d" style="font-size:20px;color:var(--b);margin:28px 0 12px">Riwayat pesanan selesai hari ini</h2>
+<div class="sortbox"><select aria-label="Urutkan"><option>Terbaru ke terlama</option><option>Terlama ke terbaru</option><option>Kategori (A–Z)</option></select><span class="ico" title="Urutkan">⇅</span></div>
+<div class="sc"><table><tr><th>Kode</th><th>Waktu selesai</th><th>Pelanggan</th><th>Kategori</th><th>Total</th></tr><tr><td>LDY-014</td><td>28 Okt · 17.40</td><td>[Nama]</td><td>Cuci Kiloan</td><td>Rp 29.000</td></tr><tr><td>LDY-013</td><td>28 Okt · 15.10</td><td>[Nama]</td><td>Cuci Linen</td><td>Rp 40.000</td></tr><tr><td>LDY-012</td><td>28 Okt · 11.25</td><td>[Nama]</td><td>Cuci Kiloan</td><td>Rp 53.000</td></tr><tr><td>LDY-011</td><td>28 Okt · 09.40</td><td>[Nama]</td><td>Cuci Satuan</td><td>Rp 60.000</td></tr></table></div>
+</div>
+<div class="panel panel-w">
+<h2 class="d" style="font-size:20px;color:var(--b);margin-bottom:12px">Pendapatan Senin – Minggu</h2>
+<div class="bars"><div class="bar"><i style="height:107px"></i><span>Sen</span></div><div class="bar"><i style="height:130px"></i><span>Sel</span></div><div class="bar"><i style="height:123px"></i><span>Rab</span></div><div class="bar"><i style="height:156px"></i><span>Kam</span></div><div class="bar"><i style="height:177px"></i><span>Jum</span></div><div class="bar"><i style="height:220px"></i><span>Sab</span></div><div class="bar"><i style="height:138px"></i><span>Min</span></div></div>
+<h2 class="d" style="font-size:20px;color:var(--b);margin:28px 0 12px">Riwayat pesanan selesai minggu ini</h2>
+<div class="sortbox"><select aria-label="Urutkan"><option>Terbaru ke terlama</option><option>Terlama ke terbaru</option><option>Kategori (A–Z)</option></select><span class="ico" title="Urutkan">⇅</span></div>
+<div class="sc"><table><tr><th>Kode</th><th>Tanggal selesai</th><th>Pelanggan</th><th>Kategori</th><th>Total</th></tr><tr><td>LDY-014</td><td>28 Okt 2026</td><td>[Nama]</td><td>Cuci Kiloan</td><td>Rp 29.000</td></tr><tr><td>LDY-013</td><td>28 Okt 2026</td><td>[Nama]</td><td>Cuci Linen</td><td>Rp 40.000</td></tr><tr><td>LDY-012</td><td>27 Okt 2026</td><td>[Nama]</td><td>Cuci Kiloan</td><td>Rp 53.000</td></tr><tr><td>LDY-011</td><td>27 Okt 2026</td><td>[Nama]</td><td>Cuci Satuan</td><td>Rp 60.000</td></tr><tr><td>LDY-010</td><td>26 Okt 2026</td><td>[Nama]</td><td>Self Service</td><td>Rp 10.000</td></tr></table></div>
+</div>
+<div class="panel panel-m">
+<h2 class="d" style="font-size:20px;color:var(--b);margin-bottom:12px">Pendapatan per bulan (tahun terpilih)</h2>
+<div class="bars"><div class="bar"><i style="height:152px"></i><span>Jan</span></div><div class="bar"><i style="height:178px"></i><span>Feb</span></div><div class="bar"><i style="height:165px"></i><span>Mar</span></div><div class="bar"><i style="height:195px"></i><span>Apr</span></div><div class="bar"><i style="height:190px"></i><span>Mei</span></div><div class="bar"><i style="height:173px"></i><span>Jun</span></div><div class="bar"><i style="height:203px"></i><span>Jul</span></div><div class="bar"><i style="height:186px"></i><span>Agu</span></div><div class="bar"><i style="height:199px"></i><span>Sep</span></div><div class="bar"><i style="height:220px"></i><span>Okt</span></div><div class="bar"><i style="height:12px"></i><span>Nov</span></div><div class="bar"><i style="height:12px"></i><span>Des</span></div></div>
+<h2 class="d" style="font-size:20px;color:var(--b);margin:28px 0 12px">Riwayat pesanan selesai bulan ini</h2>
+<div class="sortbox"><select aria-label="Urutkan"><option>Terbaru ke terlama</option><option>Terlama ke terbaru</option><option>Kategori (A–Z)</option></select><span class="ico" title="Urutkan">⇅</span></div>
+<div class="sc"><table><tr><th>Kode</th><th>Tanggal selesai</th><th>Pelanggan</th><th>Kategori</th><th>Total</th></tr><tr><td>LDY-120</td><td>28 Okt 2026</td><td>[Nama]</td><td>Cuci Kiloan</td><td>Rp 29.000</td></tr><tr><td>LDY-119</td><td>27 Okt 2026</td><td>[Nama]</td><td>Cuci Linen</td><td>Rp 40.000</td></tr><tr><td>LDY-118</td><td>15 Okt 2026</td><td>[Nama]</td><td>Cuci Satuan</td><td>Rp 53.000</td></tr><tr><td>LDY-117</td><td>02 Okt 2026</td><td>[Nama]</td><td>Self Service</td><td>Rp 10.000</td></tr></table></div>
+</div>
+<p class="mono" style="font-size:12px;margin:16px 0 0">Data pada tampilan ini hanya contoh.</p>
+</section>
+</main></div>
+</div>
+
+</body></html>

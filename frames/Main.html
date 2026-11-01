@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Laundyku — Beranda</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&amp;family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+.hero-img{background:url(../assets/e7a615b5ae21475659d8ec1db8e2527d.webp) center / cover no-repeat}
+a{color:inherit;text-decoration:none}
+.w{max-width:1100px;margin:0 auto;padding:0 28px;box-sizing:border-box}
+.d{font-family:'Archivo Black',Impact,sans-serif;text-transform:uppercase;letter-spacing:-.01em;line-height:.98;margin:0}
+.btn{display:inline-block;background:var(--b);color:#fff;font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:14px;padding:15px 28px;border-radius:999px;min-height:44px;box-sizing:border-box;border:0;cursor:pointer}
+.btn.y{background:var(--y);color:var(--k)}
+.btn.o{background:transparent;color:var(--k);box-shadow:inset 0 0 0 2px var(--k)}
+.btn:hover{opacity:.9}
+.card{background:var(--c);border:2px solid var(--k);border-radius:20px;box-shadow:6px 6px 0 var(--k);padding:24px;color:var(--k)}
+.mono{font-family:'Space Mono',monospace;font-size:13px;line-height:1.6}
+.out{color:transparent;-webkit-text-stroke:2px var(--y)}
+.chip{display:inline-block;background:var(--y);color:var(--k);border:2px solid var(--k);border-radius:999px;padding:4px 12px;font-family:'Space Mono',monospace;font-size:12px;font-weight:700}
+.pt{overflow-x:auto}
+@media (min-width:900px){.hero{min-height:clamp(700px,calc(100vh - 85px),860px);display:flex;align-items:center;box-sizing:border-box}.hero>.w{width:100%}.tall{min-height:clamp(760px,100vh,900px);display:flex;align-items:center;box-sizing:border-box}.tall>.w{width:100%}.tall .card{padding:36px}}
+.pt table{border-collapse:collapse;width:100%;min-width:640px}
+.pt th,.pt td{padding:14px 12px;border-bottom:2px dashed #C9B98F;text-align:left;font-family:'Space Mono',monospace;font-size:13px}
+.pt td.p{color:var(--r);font-weight:700}
+.pt th{font-size:11px;text-transform:uppercase}
+details{background:var(--c);border:2px solid var(--k);border-radius:16px;box-shadow:4px 4px 0 var(--k);padding:18px 22px;margin-bottom:16px;color:var(--k)}
+summary{font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:15px;cursor:pointer;min-height:24px}
+details p{margin:12px 0 0}
+input,select,textarea{width:100%;padding:13px 16px;border:2px solid var(--k);border-radius:12px;font-family:'Space Mono',monospace;font-size:13px;background:#fff;box-sizing:border-box;min-height:44px}
+label{display:block;font-family:'Space Mono',monospace;font-size:12px;font-weight:700;margin:14px 0 6px;text-transform:uppercase}
+.tb{position:absolute;opacity:0;width:1px;height:1px}
+.tabs label{margin:0;cursor:pointer;background:#fff;color:var(--k);border:2px solid var(--k);border-radius:999px;padding:12px 28px;font-family:'Archivo Black',sans-serif;font-size:14px;min-height:44px;box-sizing:border-box;display:inline-flex;align-items:center}
+.pn{display:none}
+#t1:checked~.pn1,#t2:checked~.pn2,#t3:checked~.pn3,#t4:checked~.pn4{display:block}
+#t1:checked~.tabs label[for=t1],#t2:checked~.tabs label[for=t2],#t3:checked~.tabs label[for=t3],#t4:checked~.tabs label[for=t4]{background:var(--b);color:#fff}
+#t1:focus-visible~.tabs label[for=t1],#t2:focus-visible~.tabs label[for=t2],#t3:focus-visible~.tabs label[for=t3],#t4:focus-visible~.tabs label[for=t4]{outline:3px solid var(--k);outline-offset:3px}
+@media (max-width:760px){.hd{font-size:48px!important}.nv{display:none!important}.hh{font-size:36px!important}}
+</style>
+
+</head>
+<body style="margin:0">
+
+
+
+<div style="--b:#1457D6;--y:#FFD21F;--c:#FFF4DE;--r:#D42A25;--k:#0B2A6B;font-family:'Space Mono',monospace;color:var(--k);background:var(--b);overflow:hidden">
+
+<!-- NAV -->
+<div style="background:var(--c);border-bottom:2px solid var(--k)">
+<div class="w" style="display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:16px;padding-bottom:16px">
+<a href="#" class="d" style="font-size:22px;color:var(--b)">Laundy<br>ku</a>
+<nav class="nv mono" style="display:flex;gap:26px;font-weight:700;text-transform:uppercase;font-size:12px"><a href="#layanan">Layanan</a><a href="#harga">Harga</a><a href="#panduan">Panduan</a><a href="#status">Cek Status</a><a href="#jam">Jam Buka</a></nav>
+<a class="btn" href="#">Login</a>
+</div></div>
+
+<!-- HERO -->
+
+
+<!-- MARQUEE -->
+<section style="background-color:#EEF2F7;background-image:linear-gradient(var(--b) 1.5px,transparent 1.5px),linear-gradient(90deg,var(--b) 1.5px,transparent 1.5px);background-size:140px 140px;padding:80px 0 90px" class="hero">
+<div class="w" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:40px;align-items:center">
+<div>
+<h1 class="d hd" style="font-size: 84px; color: var(--b); background: #EEF2F7; display: inline; padding: 4px 8px; -webkit-box-decoration-break: clone; box-decoration-break: clone; width: 546px; position: relative; left: -60px">Laundry ramah di lingkungan<br>mu</h1>
+<p class="mono" style="max-width:440px;margin:28px 0;background:#EEF2F7;padding:8px;display:inline-block">Jemput cuciannya, cuci bersih, antar kembali wangi dan rapi. Satu mesin untuk satu pelanggan, tanpa dicampur.</p>
+<div style="display:flex;gap:12px;flex-wrap:wrap"><a class="btn" href="#">Pesan Sekarang</a><a class="btn y" href="#status" style="box-shadow:inset 0 0 0 2px var(--k)">Cek Status</a></div>
+</div>
+<div style="position: relative; min-height: 440px; display: flex; align-items: center; justify-content: center; left: 60px">
+<div style="width: 380px; max-width: 100%; height: 420px; border: 3px solid var(--k); border-radius: 190px 190px 24px 24px; display: flex; align-items: center; justify-content: center; text-align: center; padding: 24px; box-sizing: border-box" class="mono hero-img"><br></div>
+<div class="chip" style="position:absolute;left:0;top:40px;transform:rotate(-6deg)">Jemput maks. 30 menit</div>
+<div class="chip" style="position:absolute;right:0;bottom:60px;transform:rotate(5deg);background:#fff">Express 6 jam</div>
+</div></div>
+</section><div style="background:var(--b);padding:34px 0;overflow:hidden">
+<div class="d out" style="font-size:54px;white-space:nowrap;transform:rotate(-2deg);margin-left:-40px">Antar jemput · Express · Cek status · Antar jemput · Express · Cek status · Antar</div>
+</div>
+
+<!-- LAYANAN -->
+<section id="layanan" style="padding:70px 0 90px">
+<div class="w">
+<h2 class="d hh" style="font-size:64px;color:var(--y);text-align:center;margin-bottom:12px">Cek layanan kami</h2>
+<p class="mono" style="color:#fff;text-align:center;margin:0 0 48px">Pilih layanan yang sesuai kebutuhanmu. Semua dikerjakan dengan sabar.</p>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:28px">
+<div class="card"><div class="d" style="font-size:13px;color:var(--b)">01</div><h3 class="d" style="font-size:26px;margin:6px 0 10px">Cuci Kiloan</h3><p class="mono" style="margin:0">Cuci, kering, dan dilipat rapi. Cocok untuk pakaian harian.</p></div>
+<div class="card" style="background:#fff"><div class="d" style="font-size:13px;color:var(--b)">02</div><h3 class="d" style="font-size:26px;margin:6px 0 10px">Cuci Satuan</h3><p class="mono" style="margin:0">Dicuci per item untuk pakaian khusus, sepatu, tas, dan lainnya.</p></div>
+<div class="card"><div class="d" style="font-size:13px;color:var(--b)">03</div><h3 class="d" style="font-size:26px;margin:6px 0 10px">Cuci Linen</h3><p class="mono" style="margin:0">Sprei, bed cover, selimut, gorden, dan linen lainnya.</p></div>
+<div class="card" style="background:#fff"><div class="d" style="font-size:13px;color:var(--b)">04</div><h3 class="d" style="font-size:26px;margin:6px 0 10px">Self Service</h3><p class="mono" style="margin:0">Cuci sendiri di outlet dengan mesin bersih dan siap pakai.</p></div>
+</div></div>
+</section>
+
+<!-- HARGA -->
+<section id="harga" style="background:var(--c);padding:80px 0;border-top:3px solid var(--k);border-bottom:3px solid var(--k)">
+<div class="w">
+<h2 class="d hh" style="font-size:64px;color:var(--b);margin-bottom:12px">Harga &amp; kecepatan</h2>
+<p class="mono" style="margin:0 0 28px;max-width:560px">Pilih jenis laundry, lalu lihat harga dan kecepatannya. Harga belum termasuk antar jemput.</p>
+<input class="tb" type="radio" name="jns" id="t1" checked=""><input class="tb" type="radio" name="jns" id="t2"><input class="tb" type="radio" name="jns" id="t3"><input class="tb" type="radio" name="jns" id="t4">
+<div class="tabs" style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:28px"><label for="t1">Kiloan</label><label for="t2">Satuan</label><label for="t3">Linen</label><label for="t4">Self Service</label></div>
+<div class="card pt pn pn1" style="background:#fff"><table><tr><th>Kiloan (min. 3 kg)</th><th>Reguler<br>3 hari</th><th>One Day<br>24 jam</th><th>Express<br>6 jam</th><th>Quick<br>3 jam</th></tr><tr><td><b>Cuci kering lipat</b></td><td class="p">Rp 5.000/kg</td><td class="p">Rp 7.000/kg</td><td class="p">Rp 10.000/kg</td><td class="p">Rp 14.000/kg</td></tr><tr><td><b>Cuci kering gosok</b></td><td class="p">Rp 8.000/kg</td><td class="p">Rp 10.000/kg</td><td class="p">Rp 13.000/kg</td><td class="p">Rp 17.000/kg</td></tr><tr><td><b>Setrika kiloan</b></td><td class="p">Rp 5.000/kg</td><td class="p">Rp 7.000/kg</td><td class="p">Rp 10.000/kg</td><td class="p">Rp 14.000/kg</td></tr></table></div>
+<div class="card pt pn pn2" style="background:#fff"><table><tr><th>Satuan</th><th>Reguler<br>3 hari</th><th>Express<br>24 jam</th></tr><tr><td><b>Kemeja / blus</b></td><td class="p">Rp 12.000</td><td class="p">Rp 18.000</td></tr><tr><td><b>Celana / rok</b></td><td class="p">Rp 12.000</td><td class="p">Rp 18.000</td></tr><tr><td><b>Jas / blazer</b></td><td class="p">Rp 30.000</td><td class="p">Rp 40.000</td></tr><tr><td><b>Jaket</b></td><td class="p">Rp 25.000</td><td class="p">Rp 35.000</td></tr><tr><td><b>Gaun</b></td><td class="p">Rp 35.000</td><td class="p">Rp 45.000</td></tr></table></div>
+<div class="card pt pn pn3" style="background:#fff"><table><tr><th>Linen</th><th>Reguler<br>3 hari</th><th>Express<br>24 jam</th></tr><tr><td><b>Sprei</b></td><td class="p">Rp 20.000</td><td class="p">Rp 28.000</td></tr><tr><td><b>Bed cover</b></td><td class="p">Rp 30.000</td><td class="p">Rp 40.000</td></tr><tr><td><b>Selimut</b></td><td class="p">Rp 25.000</td><td class="p">Rp 35.000</td></tr><tr><td><b>Gorden (per meter)</b></td><td class="p">Rp 10.000</td><td class="p">Rp 15.000</td></tr><tr><td><b>Bantal / guling</b></td><td class="p">Rp 15.000</td><td class="p">Rp 22.000</td></tr></table></div>
+<div class="card pt pn pn4" style="background:#fff"><table><tr><th>Self service</th><th>Durasi</th><th>Harga</th></tr><tr><td><b>Mesin cuci 8 kg</b></td><td>30 menit</td><td class="p">Rp 15.000</td></tr><tr><td><b>Mesin cuci 12 kg</b></td><td>30 menit</td><td class="p">Rp 20.000</td></tr><tr><td><b>Pengering</b></td><td>10 menit</td><td class="p">Rp 6.000</td></tr><tr><td><b>Pengering</b></td><td>20 menit</td><td class="p">Rp 10.000</td></tr></table></div>
+<p class="mono" style="font-size:12px;margin:16px 0 28px">.</p>
+<a class="btn y" href="#" style="box-shadow:inset 0 0 0 2px var(--k)">Pesan sekarang</a>
+</div>
+</section>
+
+<!-- PANDUAN -->
+<section id="panduan" style="background:var(--y);padding:130px 0;border-bottom:3px solid var(--k)">
+<div class="w" style="max-width:1280px">
+<h2 class="d hh" style="font-size:84px;color:var(--b);margin-bottom:20px">Tinggal duduk manis</h2>
+<p class="mono" style="margin:0 0 64px;font-size:16px">Empat langkah, cucian beres. Kamu cukup tunggu di rumah.</p>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:36px">
+<div class="card" style="background:#fff;padding:40px 32px;min-height:360px"><div class="d" style="font-size:104px;color:var(--b);margin-bottom:28px">1</div><h3 class="d" style="font-size:24px;margin:8px 0 14px">Isi reservasi</h3><p class="mono" style="margin:0;font-size:15px">Isi form di bawah atau chat WhatsApp.</p></div>
+<div class="card" style="background:#fff;padding:40px 32px;min-height:360px"><div class="d" style="font-size:104px;color:var(--b);margin-bottom:28px">2</div><h3 class="d" style="font-size:24px;margin:8px 0 14px">PICKUP/ANTAR SENDIRI</h3><p class="mono" style="margin:0;font-size:15px">Kurir menjemput ke alamatmu.</p></div>
+<div class="card" style="background:#fff;padding:40px 32px;min-height:360px"><div class="d" style="font-size:104px;color:var(--b);margin-bottom:28px">3</div><h3 class="d" style="font-size:24px;margin:8px 0 14px">DIPROSES</h3><p class="mono" style="margin:0;font-size:15px">Satu mesin untuk satu customer.</p></div>
+<div class="card" style="background:#fff;padding:40px 32px;min-height:360px"><div class="d" style="font-size:104px;color:var(--b);margin-bottom:28px">4</div><h3 class="d" style="font-size:24px;margin:8px 0 14px">Diantar</h3><p class="mono" style="margin:0;font-size:15px">Bersih, wangi, dan rapi di depan pintu.</p></div>
+</div></div>
+</section>
+
+<!-- STATUS + JAM -->
+<section style="background-color:#EEF2F7;background-image:linear-gradient(var(--b) 1.5px,transparent 1.5px),linear-gradient(90deg,var(--b) 1.5px,transparent 1.5px);background-size:140px 140px;padding:90px 0;border-bottom:3px solid var(--k)" class="tall">
+<div class="w" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:36px;align-items:start">
+<div id="status" class="card" style="background:var(--b);color:#fff;border-color:var(--k)">
+<h2 class="d" style="font-size:36px;color:var(--y);margin-bottom:12px">Cek status pesanan</h2>
+<p class="mono" style="margin:0 0 8px">Masukkan kode pesanan dari nota atau WhatsApp.</p>
+<label for="kode">Kode pesanan</label>
+<div style="display:flex;gap:10px;flex-wrap:wrap"><input id="kode" type="text" value="LDY-20261028-014" style="flex:1;min-width:180px"><button type="button" class="btn y">Cek</button></div>
+<div class="mono" style="margin-top:24px;background:var(--c);color:var(--k);border-radius:14px;padding:18px">
+<div>✔ Pesanan diterima</div><div>✔ Cucian ditimbang</div><div style="color:var(--r);font-weight:700">● Sedang dicuci · estimasi selesai 30 Okt</div><div style="color:#7A7F8F">○ Siap diantar / diambil</div><div style="color:#7A7F8F">○ Selesai</div></div>
+</div>
+<div id="jam" class="card" style="background:#fff">
+<h2 class="d" style="font-size:36px;color:var(--b);margin-bottom:20px">Jam operasional</h2>
+<div class="mono" style="display:flex;justify-content:space-between;padding:14px 0;border-bottom:2px dashed #C9B98F"><span>Senin – Jumat</span><b>07.00 – 21.00</b></div>
+<div class="mono" style="display:flex;justify-content:space-between;padding:14px 0;border-bottom:2px dashed #C9B98F"><span>Sabtu</span><b>08.00 – 20.00</b></div>
+<div class="mono" style="display:flex;justify-content:space-between;padding:14px 0;border-bottom:2px dashed #C9B98F"><span>Minggu</span><b>09.00 – 17.00</b></div>
+<p class="mono" style="font-size:12px;margin:16px 0 0">Order terakhir 1 jam sebelum tutup. Jam contoh, sesuaikan dengan usahamu.</p>
+</div></div>
+</section>
+
+<!-- TESTIMONI -->
+<section style="background:var(--c);padding:80px 0;border-top:3px solid var(--k);border-bottom:3px solid var(--k)">
+<div class="w">
+<h2 class="d hh" style="font-size:56px;color:var(--b);text-align:center;margin-bottom:44px">Apa kata pelanggan?</h2>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:28px">
+<div class="card" style="background:#fff"><div style="color:#E0A800;font-size:18px">★★★★★</div><p class="mono">“Cepat, wangi, rapi, dan ada layanan antar jemput. Tidak khawatir kehabisan baju.”</p><b class="mono">[Nama pelanggan]</b></div>
+<div class="card" style="background:var(--y)"><div style="font-size:18px">★★★★★</div><p class="mono">“Satu mesin satu customer, jadi baju tidak tercampur. Hasilnya bersih dan wangi.”</p><b class="mono">[Nama pelanggan]</b></div>
+<div class="card" style="background:#fff"><div style="color:#E0A800;font-size:18px">★★★★★</div><p class="mono">“Pilih Express, sore dipesan, besok sudah diantar. Sangat terbantu.”</p><b class="mono">[Nama pelanggan]</b></div>
+</div></div>
+</section>
+
+<!-- FAQ -->
+<section style="padding:90px 0">
+<div class="w" style="max-width:820px">
+<h2 class="d hh" style="font-size:56px;color:var(--y);margin-bottom:36px">Pertanyaan umum</h2>
+<details open=""><summary>Berapa minimal cuci?</summary><p class="mono">Minimal 3 kg untuk layanan kiloan. Untuk satuan, tidak ada minimal.</p></details>
+<details><summary>Pesan Express sore hari, selesai kapan?</summary><p class="mono">Express selesai dalam 6 jam sejak cucian diterima, selama masih dalam jam operasional.</p></details>
+<details><summary>Siapa yang menjemput cucian?</summary><p class="mono">Kurir kami datang ke alamatmu, maksimal 30 menit setelah pesanan masuk.</p></details>
+<details><summary>Apakah pembayaran harus cashless?</summary><p class="mono">Bayar lewat QRIS atau transfer. Estimasi waktu dimulai setelah pembayaran lunas.</p></details>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer style="background: var(--y); color: var(--k); padding: 70px 0 0; overflow: hidden; border-top: 3px solid var(--k); width: 1434px">
+<div class="w" style="display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap;align-items:end">
+<div><h2 class="d" style="font-size:40px;color:var(--b);margin-bottom:20px">Cucian bersih,<br>tinggal satu klik.</h2><a class="btn" href="#">Pesan Sekarang</a></div>
+<div class="mono" style="line-height:2">WhatsApp [0812-xxxx-xxxx]<br>Buka setiap hari 07.00–20.00<br>[Alamat laundry]<br>© 2026 Laundyku</div>
+</div>
+<div class="d out" style="font-size:210px;white-space:nowrap;margin:40px 0 -40px 28px;-webkit-text-stroke:3px var(--b)">Laundyku</div>
+</footer>
+</div>
+
+
+
+</body></html>

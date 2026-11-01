@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Profil Pengguna — Laundyku</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&amp;family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}a{color:inherit;text-decoration:none}
+.d{font-family:'Archivo Black',Impact,sans-serif;text-transform:uppercase;letter-spacing:-.01em;line-height:1;margin:0}
+.mono{font-family:'Space Mono',monospace;font-size:13px;line-height:1.6}
+.btn{display:inline-flex;align-items:center;justify-content:center;background:var(--b);color:#fff;font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:13px;padding:10px 22px;border-radius:999px;min-height:44px;box-sizing:border-box;border:0;cursor:pointer}
+.btn.y{background:var(--y);color:var(--k);box-shadow:inset 0 0 0 2px var(--k)}
+.btn.s{padding:6px 16px;min-height:40px;font-size:12px}
+.card{background:#fff;border:2px solid var(--k);border-radius:18px;box-shadow:5px 5px 0 var(--k);padding:28px;color:var(--k)}
+.chip{display:inline-block;border:2px solid var(--k);border-radius:999px;padding:3px 12px;font-family:'Space Mono',monospace;font-size:12px;font-weight:700;background:var(--c);white-space:nowrap}
+.chip.y{background:var(--y)}.chip.b{background:var(--b);color:#fff}.chip.g{background:#12805C;color:#fff}.chip.r{background:var(--r);color:#fff}
+.app{display:grid;grid-template-columns:270px 1fr;min-height:100%}
+.side{background:var(--b);color:#fff;padding:28px 20px;display:flex;flex-direction:column;gap:8px}
+.side a{display:flex;align-items:center;min-height:44px;padding:0 16px;border-radius:12px;font-family:'Space Mono',monospace;font-weight:700;font-size:13px;text-transform:uppercase}
+.side a.on{background:var(--y);color:var(--k)}
+.main{padding:40px 48px;display:flex;flex-direction:column;gap:32px;background:#EEF2F7}
+.g2{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:28px}
+.g4{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px}
+.sc{overflow-x:auto}table{border-collapse:collapse;width:100%;min-width:560px}
+th,td{padding:12px 10px;border-bottom:2px dashed #C9B98F;text-align:left;font-family:'Space Mono',monospace;font-size:13px}
+th{font-size:11px;text-transform:uppercase}
+label{display:block;font-family:'Space Mono',monospace;font-size:12px;font-weight:700;margin:14px 0 6px;text-transform:uppercase}
+input,select,textarea{width:100%;padding:12px 16px;border:2px solid var(--k);border-radius:12px;font-family:'Space Mono',monospace;font-size:13px;background:#fff;box-sizing:border-box;min-height:44px}
+h2.d{font-size:24px;color:var(--b);margin-bottom:16px}
+@media (max-width:900px){.app{grid-template-columns:1fr}.side{flex-direction:row;flex-wrap:wrap}.main{padding:24px 20px}}
+</style>
+</head>
+<body style="margin:0">
+
+<div style="--b:#1457D6;--y:#FFD21F;--c:#FFF4DE;--r:#D42A25;--k:#0B2A6B;font-family:'Space Mono',monospace;color:var(--k);min-height:1250px;background:#EEF2F7">
+<div style="background:var(--c);border-bottom:2px solid var(--k)"><div style="max-width:1100px;margin:0 auto;padding:16px 28px;display:flex;align-items:center;justify-content:space-between;gap:16px;box-sizing:border-box"><a href="#" class="d" style="font-size:22px;color:var(--b)">Laundy<br>ku</a><nav class="mono" style="display:flex;gap:26px;font-weight:700;text-transform:uppercase;font-size:12px"><a href="#">Layanan</a><a href="#">Harga</a><a href="#">Panduan</a><a href="#">Cek Status</a><a href="#">Jam Buka</a></nav><div style="position:relative"><a href="#" class="chip" style="display:flex;align-items:center;gap:10px;padding:5px 14px 5px 6px;background:#fff;min-height:44px;box-sizing:border-box"><span style="width:32px;height:32px;border-radius:50%;background:var(--y);border:2px solid var(--k);display:inline-flex;align-items:center;justify-content:center;font-family:'Archivo Black',sans-serif;font-size:13px">N</span>[Nama] ▾</a></div></div></div><main style="max-width:1000px;margin:0 auto;padding:48px 28px;display:flex;flex-direction:column;gap:28px"><div style="display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap"><h1 class="d" style="font-size:40px;color:var(--b)">Profil saya</h1><a href="#" class="mono" style="font-weight:700;text-decoration:underline">← Kembali ke dashboard</a></div><div style="display:flex;flex-direction:column;gap:28px"><div class="card" style="text-align:center"><div style="width:120px;height:120px;border-radius:50%;background:var(--y);border:3px solid var(--k);margin:0 auto 16px;display:flex;align-items:center;justify-content:center;font-family:'Archivo Black',sans-serif;font-size:44px">N</div><div class="d" style="font-size:20px">[Nama pelanggan]</div><div style="margin:10px 0 16px"><span class="chip y">Pelanggan</span></div><a class="btn y s" href="#">Ubah foto</a></div><div style="display:flex;flex-direction:column;gap:28px"><section id="data" class="card"><h2 class="d">Data diri</h2><label>Nama lengkap</label><input type="text" value="[Nama pelanggan]" placeholder=""><label>Email</label><input type="text" value="nama@email.com" placeholder=""><label>No. WhatsApp</label><input type="text" value="08xx-xxxx-xxxx" placeholder=""><label>Alamat jemput utama</label><textarea rows="3" placeholder="Jl. ..."></textarea><div style="margin-top:20px"><a class="btn  " href="#">Simpan perubahan</a></div></section><section id="password" class="card"><h2 class="d">Ubah password</h2><label>Password lama</label><input type="text" value="" placeholder="••••••••"><label>Password baru</label><input type="text" value="" placeholder="••••••••"><label>Ulangi password baru</label><input type="text" value="" placeholder="••••••••"><div style="margin-top:20px"><a class="btn  " href="#">Perbarui password</a></div></section></div></div></main>
+</div>
+
+</body></html>
